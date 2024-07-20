@@ -27,11 +27,13 @@
   },
   "dependencies": {
     "core-js": "^3.37.1",
+    "fractional": "^1.0.0",
     "regenerator-runtime": "^0.14.1"
   },
   "babel": {
     "presets": [
       "@babel/preset-env"
     ]
-  }
+  },
+  "main": "index.js"
 }
