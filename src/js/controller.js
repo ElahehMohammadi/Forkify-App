@@ -16,7 +16,6 @@ const controlRecipes = async function () {
   try {
     // loading recipe
     const id = window.location.hash.slice(1);
-    // window.location.hash = `#${id}`;
 
     if (!id) return;
 
