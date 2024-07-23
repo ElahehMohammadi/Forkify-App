@@ -22,11 +22,10 @@ export const loadRecipe = async function (id) {
       publisher: recipe.publisher,
       sourceURL: recipe.source_url,
       image: recipe.image_url,
-      serving: recipe.serving,
+      serving: recipe.servings,
       cookingTime: recipe.cooking_time,
       ingredients: recipe.ingredients,
     };
-    console.log(state.recipe);
   } catch (err) {
     //temp
     console.error(`!!!!${err}!!!!`);

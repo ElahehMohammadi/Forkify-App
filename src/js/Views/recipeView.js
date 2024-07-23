@@ -27,7 +27,7 @@ class recipeView extends view {
   addHendlerRender(handler) {
     ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, handler));
   }
-  _generateMurkup() {
+  _generateMarkup() {
     return `
     <figure class="recipe__fig">
           <img src="${this._data.image}" alt="${
@@ -72,9 +72,7 @@ class recipeView extends view {
           </div>
 
           <div class="recipe__user-generated">
-            <svg>
-              <use href="${icons}#icon-user"></use>
-            </svg>
+           
           </div>
           <button class="btn--round">
             <svg class="">

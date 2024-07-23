@@ -2,23 +2,31 @@ import icons from 'url:../../img/icons.svg'; //parcel 2
 
 export default class view {
   _data;
-  render(data) {
-    this._data = data;
 
-    const markup = this._generateMurkup();
-    this._clear();
-    this._parentElement.insertAdjacentHTML('afterbegin', markup);
-  }
   _clear() {
     this._parentElement.innerHTML = '';
   }
+  render(data, render = true) {
+    console.log(this._parentElement);
+    if (!data || (Array.isArray(data) && data.length === 0))
+      return this.renderError();
+
+    this._data = data;
+    const markup = this._generateMarkup();
+
+    if (!render) return markup;
+
+    this._clear();
+    this._parentElement.insertAdjacentHTML('afterbegin', markup);
+  }
+
   renderSpinner() {
     const markup = `<div class="spinner">
           <svg>
             <use href="${icons}#icon-loader"></use>
           </svg>
         </div>`;
-    this._parentElement.innerHTML = '';
+    this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
   renderError(message = this._errorMessage) {
