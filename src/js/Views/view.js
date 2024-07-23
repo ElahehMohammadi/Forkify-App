@@ -7,7 +7,6 @@ export default class view {
     this._parentElement.innerHTML = '';
   }
   render(data, render = true) {
-    console.log(this._parentElement);
     if (!data || (Array.isArray(data) && data.length === 0))
       return this.renderError();
 
