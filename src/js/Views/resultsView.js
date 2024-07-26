@@ -8,7 +8,11 @@ class resultsView extends view {
   _generateMarkup() {
     return this._data.map(el => this._generateMarkupPreview(el)).join('');
   }
-
+  // /// SUB SECTION not sure
+  // _ActiveLink(result) {
+  //   const element = document.getElementById(`${result.id}`);
+  //   element.classList.add('preview__link--active');
+  // }
   _generateMarkupPreview(result) {
     return `
     <li class="preview">

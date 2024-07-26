@@ -5,6 +5,7 @@ class searchView {
     const query = this._parentElement.querySelector('.search__field').value;
     this._clearInput();
     return query;
+    // return 'pizza';
   }
   _clearInput() {
     this._parentElement.querySelector('.search__field').value = '';
